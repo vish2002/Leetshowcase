@@ -105,7 +105,7 @@ async function displayPersonalInfo(username) {
         }
       } else {
         // Otherwise, just display the key-value pair
-        li.innerHTML = `<span>${key}:</span> ${data[key]}`;
+        li.innerHTML = `<span>${key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()}:</span> ${data[key]}`;
         statsList.appendChild(li);
       }
     });
