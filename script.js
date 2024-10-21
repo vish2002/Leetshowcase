@@ -32,7 +32,6 @@ function updateProgress(solved, total, label, circle) {
 }
 
 // Function to display stats (called when fetching user profile data)
-
 async function displayPersonalInfo(username) {
   const personaldetails = `https://alfa-leetcode-api.onrender.com/${username}`;
   const statsList = document.getElementById("statsList");
@@ -66,7 +65,7 @@ async function displayPersonalInfo(username) {
 
       const li = document.createElement("li");
 
-      // If the value is a URL (social links), create a clickable link
+      // If the value is a URL (social links), creating a clickable link
       if (
         key === "gitHub" ||
         key === "twitter" ||
@@ -95,16 +94,15 @@ async function displayPersonalInfo(username) {
             break;
         }
 
-        // Set common properties
-        newLink.href = `${data[key]}`;
-        newLink.target = "_blank"; // Open link in new tab
 
-        newLink.appendChild(newImg); // Append the image to the link
+        newLink.href = `${data[key]}`;
+        newLink.target = "_blank"; 
+
+        newLink.appendChild(newImg); 
         if (socialsCard) {
           socialsCard.appendChild(newLink); // Append link to socialsCard
         }
       } else {
-        // Otherwise, just display the key-value pair
         li.innerHTML = `<span>${key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()}:</span> ${data[key]}`;
         statsList.appendChild(li);
       }
@@ -132,7 +130,7 @@ async function displayStats(username) {
     }
 
     const data = await response.json();
-    document.querySelector(".circlecard").style.display = "block"; // Show the profile card
+    document.querySelector(".circlecard").style.display = "block";
 
     const easyQuestionsCount = data.totalEasy;
     const mediumQuestionsCount = data.totalMedium;
