@@ -14,4 +14,6 @@ If you do not have Leetcode username here are few usernames you can use for tryi
    
 [API Repo Link](https://github.com/alfaarghya/alfa-leetcode-api)
 <br><br>
+![Demo image](https://github.com/vish2002/Leetshowcase/blob/main/Mystats.png)
+<br>
 [Live Demo](https://leetshowcase.vercel.app/)
